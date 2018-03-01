@@ -1,0 +1,442 @@
+/*
+* Piano Keyboard 
+* Author: Luiz Felipe Tartarotti Fialho
+* @LFeh / luizfelipe.tf.13@gmail.com
+* http://www.felipefialho.com/
+*/
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+@font-face {
+  font-family: 'piano-keyboard';
+  src: url('icons/piano-keyboard.eot?nfc6q9');
+  src: url('icons/piano-keyboard.eot?#iefixnfc6q9') format('embedded-opentype'), url('icons/piano-keyboard.woff?nfc6q9') format('woff'), url('icons/piano-keyboard.ttf?nfc6q9') format('truetype'), url('icons/piano-keyboard.svg?nfc6q9#piano-keyboard') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'piano-keyboard';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-facebook:before {
+  content: "\e600";
+}
+.icon-linkedin:before {
+  content: "\e601";
+}
+.icon-twitter:before {
+  content: "\e602";
+}
+.icon-github:before {
+  content: "\e603";
+}
+body {
+  color: #222;
+  background: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: helvetica, arial;
+}
+a {
+  color: #555;
+  text-decoration: none;
+}
+a:hover {
+  color: #999;
+}
+.hidden {
+  visibility: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 70px;
+  margin-top: 20px;
+  line-height: 80px;
+}
+h2 {
+  color: #777;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+h3 {
+  color: #555;
+  font-size: 20px;
+  margin: 20px 0 10px;
+}
+p {
+  margin-bottom: 15px;
+}
+.wrap {
+  position: relative;
+}
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 980px;
+}
+hr {
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+.fork {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10%;
+}
+.share {
+  height: 20px;
+}
+.social-media {
+  list-style: none;
+  margin: 0;
+}
+.social-media li {
+  display: inline-block;
+  margin: 0 2px;
+}
+.social-media a {
+  transition: color .1s linear;
+  color: #222;
+  font-size: 20px;
+}
+.social-media a:hover {
+  color: #777;
+}
+.comments {
+  font-size: 12px;
+}
+@media (max-width: 767px) {
+  .container {
+    width: auto;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .fork {
+    width: 30%;
+  }
+}
+html,
+body,
+.globalContainer {
+  height: 100%;
+}
+.piano {
+  position: relative;
+  background-color: #000;
+  border-top: 2px solid #111;
+  padding: 0;
+  text-align: center;
+}
+.key {
+  display: inline-block;
+  position: relative;
+  /* margin: 0 2px;*/
+
+  width: 4.5vw;
+}
+.key:active .black-key,
+.key.active .black-key,
+.key:active .black-key:active,
+.key.active .black-key:active,
+.key:active .black-key.active,
+.key.active .black-key.active {
+  top: -0.25vh;
+}
+.key:active .black-key,
+.key.active .black-key {
+  top: -0.5vh;
+}
+.key .white-key {
+  background: #fff;
+  display: block;
+  height: 39vh;
+  border-bottom-right-radius: 10% 2%;
+  border-bottom-left-radius: 10% 2%;
+}
+.key .white-key:active,
+.key .white-key.active {
+  position: relative;
+  top: -0.5vh;
+  height: 38.6vh;
+  box-shadow: inset 10px 10px 65px 50px #90bbf6;
+}
+.key .black-key {
+  content: "";
+  box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.2), 0 2px 3px rgba(0, 0, 0, 0.4);
+  background: -webkit-linear-gradient(-20deg, #222222, #000000, #222222);
+  background: -moz-linear-gradient(-20deg, #222222, #000000, #222222);
+  background: -o-linear-gradient(-20deg, #222222, #000000, #222222);
+  background: linear-gradient(-20deg, #222222, #000000, #222222);
+  border-width: 1px 3px 8px;
+  border-style: solid;
+  border-color: #666 #222 #111 #555;
+  /* height: 160px; */
+
+  height: 24vh;
+  position: absolute;
+  top: 0px;
+  right: -40%;
+  width: 70%;
+  z-index: 10;
+}
+.key .black-key:active,
+.key .black-key.active {
+  box-shadow: inset 10px 10px 65px 50px #2e3f58;
+  border-bottom-width: 3px;
+  top: 0;
+}
+.chords {
+  padding: 2vh 2vw;
+  display: flex;
+  background-color: #fff;
+}
+.chords form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.chords form div {
+  text-align: center;
+}
+.chords form label {
+  width: 100%;
+  display: block;
+  height: 100%;
+  font-size: 1.5vw;
+  font-weight: lighter;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.chords form input {
+  position: absolute;
+  left: -100000px;
+}
+.chords form input:checked + label {
+  transform: scale(1.13);
+  box-shadow: 0 11px 11px -10px #000000;
+}
+.chords #noteSelector h1,
+.chords #typeSelector h1 {
+  font-size: 1.5vw;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 0 0.5vw;
+  line-height: 2;
+}
+.chords #noteSelector div,
+.chords #typeSelector div {
+  width: 7.5vw;
+  height: 7.5vw;
+  line-height: 7.5vw;
+  border-color: #fafafa;
+  border-style: solid inset solid solid;
+  border-width: 0.5vw;
+}
+.chords #noteSelector {
+  width: 35%;
+}
+.chords #noteSelector div label {
+  background-color: #FEAC5E;
+  color: #fff;
+}
+.chords #noteSelector div:nth-of-type(1) label,
+.chords #noteSelector div:nth-of-type(5) label,
+.chords #noteSelector div:nth-of-type(9) label {
+  background-color: #F7A66C;
+}
+.chords #noteSelector div:nth-of-type(2) label,
+.chords #noteSelector div:nth-of-type(6) label,
+.chords #noteSelector div:nth-of-type(10) label {
+  background-color: #EB9A86;
+}
+.chords #noteSelector div:nth-of-type(3) label,
+.chords #noteSelector div:nth-of-type(7) label,
+.chords #noteSelector div:nth-of-type(11) label {
+  background-color: #D384B8;
+}
+.chords #noteSelector div:nth-of-type(4) label,
+.chords #noteSelector div:nth-of-type(8) label,
+.chords #noteSelector div:nth-of-type(12) label {
+  background-color: #B682CF;
+}
+.chords #typeSelector {
+  width: 65%;
+  display: flex;
+}
+.chords #typeSelector label {
+  background: #dba99c;
+}
+.chords #typeSelector div:nth-of-type(1) label,
+.chords #typeSelector div:nth-of-type(9) label,
+.chords #typeSelector div:nth-of-type(17) label {
+  background-color: #71D6FB;
+}
+.chords #typeSelector div:nth-of-type(2) label,
+.chords #typeSelector div:nth-of-type(10) label,
+.chords #typeSelector div:nth-of-type(18) label {
+  background-color: #75D7EA;
+}
+.chords #typeSelector div:nth-of-type(3) label,
+.chords #typeSelector div:nth-of-type(11) label,
+.chords #typeSelector div:nth-of-type(19) label {
+  background-color: #7AD8D6;
+}
+.chords #typeSelector div:nth-of-type(4) label,
+.chords #typeSelector div:nth-of-type(12) label,
+.chords #typeSelector div:nth-of-type(20) label {
+  background-color: #81DAB9;
+}
+.chords #typeSelector div:nth-of-type(5) label,
+.chords #typeSelector div:nth-of-type(13) label,
+.chords #typeSelector div:nth-of-type(21) label {
+  background-color: #86DBA7;
+}
+.chords #typeSelector div:nth-of-type(6) label,
+.chords #typeSelector div:nth-of-type(14) label,
+.chords #typeSelector div:nth-of-type(22) label {
+  background-color: #88DC9D;
+}
+.chords #typeSelector div:nth-of-type(7) label,
+.chords #typeSelector div:nth-of-type(15) label,
+.chords #typeSelector div:nth-of-type(23) label {
+  background-color: #8DDD8C;
+}
+.chords #typeSelector div:nth-of-type(8) label,
+.chords #typeSelector div:nth-of-type(16) label,
+.chords #typeSelector div:nth-of-type(24) label {
+  background-color: #94DF6D;
+}
+.pianoContainer {
+  position: relative;
+}
+.btnContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  width: 15%;
+  padding-top: 0.5%;
+}
+.btnContainer .info {
+  display: flex;
+  border: 0.15vw solid white;
+  padding: 1%;
+  border-radius: 100%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  height: 8.5vw;
+  width: 8.5vw;
+  line-height: normal;
+}
+.btnContainer .info span {
+  font-size: 1.8vw;
+}
+.btnContainer #clean {
+  width: 6vw;
+  height: 6vw;
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.btnContainer #clean path {
+  fill: #fff;
+}
+.btnContainer #clean:hover,
+.btnContainer #clean:active {
+  transform: scale(1.13);
+  fill: #dba99c;
+}
+.globalContainer {
+  background-color: #000;
+}
+/* Landscape */
+@media only screen and (max-width: 800px) and (max-height: 400px) {
+  body .piano {
+    padding: 0;
+  }
+  body .key:active .black-key:active,
+  body .key.active .black-key:active,
+  body .key:active .black-key.active,
+  body .key.active .black-key.active {
+    top: -0.2vh;
+    box-shadow: inset 10px 10px 65px 50px #4c678e;
+  }
+  body .key:active .black-key,
+  body .key.active .black-key {
+    top: -0.4vh;
+  }
+  body .key .white-key {
+    height: 36vh;
+  }
+  body .key .white-key:active,
+  body .key .white-key.active {
+    top: -0.5vh;
+    height: 35.6vh;
+  }
+  body .key .black-key {
+    height: 22vh;
+    top: 0px;
+    right: -40%;
+    width: 70%;
+  }
+  body .key .black-key:active,
+  body .key .black-key.active {
+    top: 0;
+  }
+  body .chords {
+    padding: 0;
+  }
+  body .chords #noteSelector div,
+  body .chords #typeSelector div {
+    width: 8.1vw;
+    height: 8vw;
+  }
+  body .chords form label {
+    font-size: 1.7vw;
+    font-weight: bold;
+  }
+  body .btnContainer {
+    padding-top: 2%;
+  }
+  body .btnContainer .info span {
+    font-size: 2vw;
+    font-weight: bold;
+    line-height: normal;
+  }
+}

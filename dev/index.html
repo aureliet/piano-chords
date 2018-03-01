@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0">
+  <meta name="description" content="Piano Keyboard developed with HTML, CSS and Javascript">
+  <meta name="keywords" content="piano, css, html, javascript, front-end">
+  <title>Piano Keyboard</title>
+  <link rel="shortcut icon" href="assets/img/ico/favicon2.ico" />
+  <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div class="globalContainer">
+   <div class="chords">
+    <form id="noteSelector">
+     <div>
+      <input id="1" value="1" name="note"  type="radio" checked>
+      <label for="1">C</label>
+    </div>
+    <div>
+      <input id="2" value="2" name="note"  type="radio">
+      <label for="2">C# / Db</label>
+    </div>
+    <div>
+      <input id="3" value="3" name="note"  type="radio">
+      <label for="3">D</label>
+    </div>
+    <div>
+      <input id="4" value="4" name="note"  type="radio">
+      <label for="4">D# / Eb</label>
+    </div>
+    <div>
+      <input id="5" value="5" name="note"  type="radio">
+      <label for="5">E</label>
+    </div>
+    <div>
+      <input id="6" value="6" name="note"  type="radio">
+      <label for="6">F</label>
+    </div>
+    <div>
+      <input id="7" value="7" name="note"  type="radio">
+      <label for="7">F# / Gb</label>
+    </div>
+    <div>
+      <input id="8" value="8"  name="note" type="radio">
+      <label for="8">G / Sol</label>
+    </div>
+    <div>
+      <input id="9" value="9"  name="note" type="radio">
+      <label for="9">G# / Ab</label>
+    </div>
+    <div>
+      <input id="10" value="10" name="note"  type="radio">
+      <label for="10">A / La</label>
+    </div>
+    <div>
+      <input id="11" value="11"  name="note" type="radio">
+      <label for="11">A# / Bb</label>
+    </div>
+    <div>
+      <input id="12" value="12" name="note"  type="radio">
+      <label for="12">B</label>
+    </div>
+  </form>
+
+  <form id="typeSelector">
+    <div>
+      <input id="Nma" value="Nma" name="chord" type="radio" checked>
+      <label for="Nma">ma</label>
+    </div>
+    <div>
+      <input id="Nma7" name="chord" value="Nma7" type="radio">
+      <label for="Nma7">ma7</label>
+    </div>
+     <div>
+      <input id="N7" name="chord" value="N7" type="radio">
+      <label for="N7">7</label>
+    </div>
+    <div>
+      <input id="Nm" value="Nm" name="chord" type="radio">
+      <label for="Nm">m</label>
+    </div>
+    <div>
+      <input id="Nm7" name="chord" value="Nm7" type="radio">
+      <label for="Nm7">m7</label>
+    </div>
+    <div>
+      <input id="NPlus" value="NPlus" name="chord" type="radio">
+      <label for="NPlus">+</label>
+    </div>
+
+    <div>
+      <input id="Ndim" value="Ndim" name="chord" type="radio">
+      <label for="Ndim">dim</label>
+    </div>
+    <div>
+      <input id="Nsus" value="Nsus" name="chord" type="radio">
+      <label for="Nsus">sus</label>
+    </div>
+    <div>
+      <input id="N4" value="N4" name="chord" type="radio">
+      <label for="N4">4</label>
+    </div>
+    <div>
+      <input id="N6" name="chord" value="N6" type="radio">
+      <label for="N6">6</label>
+    </div>
+    <div>
+      <input id="NmSharp5" name="chord" value="NmSharp5" type="radio">
+      <label for="NmSharp5">m(#5)</label>
+    </div>
+    <div>
+      <input id="N5" name="chord" value="N5" type="radio">
+      <label for="N5">5</label>
+    </div>
+    <div>
+      <input id="N2" name="chord" value="N2" type="radio">
+      <label for="N2">2</label>
+    </div>
+    <div>
+      <input id="Nm2" name="chord" value="Nm2" type="radio">
+      <label for="Nm2">m2</label>
+    </div>
+    <div>
+      <input id="Nm4" name="chord" value="Nm4" type="radio">
+      <label for="Nm4">m4</label>
+    </div>
+    <div>
+      <input id="Nm6" name="chord" value="Nm6" type="radio">
+      <label for="Nm6">m6</label>
+    </div>
+    <div>
+      <input id="Nmma7" name="chord" value="Nmma7" type="radio">
+      <label for="Nmma7">m(ma7)</label>
+    </div>
+    <div>
+      <input id="N7sus" name="chord" value="N7sus" type="radio">
+      <label for="N7sus">7sus</label>
+    </div>
+    <div>
+      <input id="Nma7b5" name="chord" value="Nma7b5" type="radio">
+      <label for="Nma7b5">ma7(b5)</label>
+    </div>
+    <div>
+      <input id="Nma7Sharp5" name="chord" value="Nma7Sharp5" type="radio">
+      <label for="Nma7Sharp5">ma7(#5)</label>
+    </div>
+    <div>
+      <input id="Nm7b5" name="chord" value="Nm7b5" type="radio">
+      <label for="Nm7b5">m7(b5)</label>
+    </div>
+    <div>
+      <input id="Ndim7" name="chord" value="Ndim7" type="radio">
+      <label for="Ndim7">dim7</label>
+    </div>
+    <div>
+      <input id="N7b5" name="chord" value="N7b5" type="radio">
+      <label for="N7b5">7(b5)</label>
+    </div>
+    <div>
+      <input id="N7Sharp5" name="chord" value="N7Sharp5" type="radio">
+      <label for="N7Sharp5">7(#5)</label>
+    </div>
+  </form>
+
+
+</div>
+
+<!-- Piano -->
+<div class="pianoContainer">
+  <ul class="piano">
+  <li class="key active">
+    <span class="white-key active" data-key="20" data-note="1C" data-number="1"></span>
+    <span class="black-key" data-key="81" data-note="1Cs" data-number="2"></span>
+  </li>
+  <li class="key">
+    <span class="white-key" data-key="65" data-note="1D" data-number="3"></span>
+    <span class="black-key" data-key="87" data-note="1Ds" data-number="4"></span>
+  </li>
+  <li class="key active">
+    <span class="white-key active" data-key="83" data-note="1E" data-number="5"></span>
+  </li>
+  <li class="key">
+    <span class="white-key" data-key="68" data-note="1F" data-number="6"></span>
+    <span class="black-key" data-key="82" data-note="1Fs" data-number="7"></span>
+  </li>
+  <li class="key active">
+    <span class="white-key active" data-key="70" data-note="1G" data-number="8"></span>
+    <span class="black-key" data-key="84" data-note="1Gs" data-number="9"></span>
+  </li>
+  <li class="key">
+    <span class="white-key" data-key="71" data-note="2A" data-number="10"></span>
+    <span class="black-key" data-key="89" data-note="2As" data-number="11"></span>
+  </li>
+  <li class="key">
+    <span class="white-key" data-key="72" data-note="2B" data-number="12"></span>
+  </li>
+  <li class="key">
+    <span class="white-key" data-key="74" data-note="2C" data-number="13"></span>
+    <span class="black-key" data-key="73" data-note="2Cs" data-number="14"></span>
+  </li>
+  <li class="key">
+    <span class="white-key" data-key="75" data-note="2D" data-number="15"></span>
+    <span class="black-key" data-key="79" data-note="2Ds" data-number="16"></span>
+  </li>
+  <li class="key">
+    <span class="white-key" data-key="76" data-note="2E" data-number="17"></span>
+  </li>
+  <li class="key">
+    <span class="white-key" data-key="186" data-note="2F" data-number="18"></span>
+    <span class="black-key" data-key="219" data-note="2Fs" data-number="19"></span>
+  </li>
+  <li class="key">
+    <span class="white-key" data-key="222" data-note="2G" data-number="20"></span>
+    <span class="black-key" data-key="221" data-note="2Gs" data-number="21"></span>
+  </li>
+  <li class="key">
+    <span class="white-key" data-key="220" data-note="3A" data-number="22"></span>
+    <span class="black-key" data-key="13" data-note="3As" data-number="23"></span>
+  </li>
+  <li class="key">
+    <span class="white-key" data-key="37" data-note="3B" data-number="24"></span>
+  </li>
+</ul>
+<div class="btnContainer">
+  <div class="info" ><span id="selectedChord">C ma</span></div>
+  <svg id="clean" version="1.1"  x="0px" y="0px"
+    viewBox="0 0 24 24" >
+<path d="M20.125,3.904c-2.102-2.101-4.986-3.406-8.189-3.406c-6.406,0-11.58,5.189-11.58,11.595
+  c0,6.405,5.174,11.595,11.58,11.595c5.408,0,9.914-3.695,11.204-8.696h-3.015c-1.188,3.378-4.406,5.798-8.189,5.798
+  c-4.797,0-8.696-3.897-8.696-8.696c0-4.797,3.899-8.696,8.696-8.696c2.408,0,4.551,1,6.119,2.58l-4.669,4.667h10.146V0.498
+  L20.125,3.904z"/>
+</svg>
+
+</div>
+</div>
+<!-- End Piano -->
+</div>
+
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="assets/js/scripts.min.js"></script>
+
+</body>
+
+</html>
