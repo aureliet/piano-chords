@@ -1,11 +1,11 @@
-<p align="center"><img src="https://github.com/aureliet/piano-chords/blob/master/screenshot.png"></p>
+<p align="center"><img src="https://aureliet.github.io/piano-chords/screenshot.png"></p>
 
 
 # Piano Chords
 
 Piano Chords Keyboard developed with HTML, CSS and Javascript.
 
-## [Demo](http://www.felipefialho.com/piano)
+## [Demo](https://aureliet.github.io/piano-chords/dev/)
 
 ## Getting Started
 
