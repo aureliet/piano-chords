@@ -18,6 +18,7 @@ Install `grunt-cli` globally with `npm install -g grunt-cli`.
 Clone the project and install dependencies
 
 git clone https://github.com/aureliet/piano-chords
+
 cd piano-chords
 npm install
 
