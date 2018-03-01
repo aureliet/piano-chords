@@ -1,9 +1,9 @@
 <p align="center"><img src="https://cloud.githubusercontent.com/assets/3603793/23483757/ffbc98c0-feb2-11e6-8d3e-c9d122bf7e3b.png"></p>
 
 
-# Piano Keyboard
+# Piano Chords
 
-Piano Keyboard developed with HTML, CSS and Javascript.
+Piano Chords Keyboard developed with HTML, CSS and Javascript.
 
 ## [Demo](http://www.felipefialho.com/piano)
 
@@ -17,8 +17,8 @@ Install `grunt-cli` globally with `npm install -g grunt-cli`.
 
 Clone the project and install dependencies
 
-git clone https://github.com/LFeh/piano-keyboard.git
-cd piano-keyboard
+git clone https://github.com/aureliet/piano-chords
+cd piano-chords
 npm install
 
 ### Compiling CSS / JavaScript and init the Browser Sync
