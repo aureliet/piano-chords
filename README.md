@@ -1,4 +1,4 @@
-<p align="center"><img src="https://cloud.githubusercontent.com/assets/3603793/23483757/ffbc98c0-feb2-11e6-8d3e-c9d122bf7e3b.png"></p>
+<p align="center"><img src="https://github.com/aureliet/piano-chords/blob/master/screenshot.png"></p>
 
 
 # Piano Chords
