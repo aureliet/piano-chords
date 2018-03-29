@@ -210,7 +210,7 @@ body,
 }
 .key .black-key:active,
 .key .black-key.active {
-  box-shadow: inset 10px 10px 65px 50px #2e3f58;
+  box-shadow: inset 10px 10px 65px 50px #1f5ab1;
   border-bottom-width: 3px;
   top: 0;
 }
