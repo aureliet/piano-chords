@@ -19,5 +19,9 @@
     "load-grunt-tasks": "~0.1.0",
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-browser-sync": "*"
+  },
+  "dependencies": {
+    "boom": "^7.2.0",
+    "hoek": "^5.0.3"
   }
 }
